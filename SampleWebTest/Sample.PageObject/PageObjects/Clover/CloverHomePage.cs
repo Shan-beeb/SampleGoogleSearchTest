@@ -14,14 +14,20 @@ namespace Sample.PageObject.PageObjects.Clover
             _page = page;
         }
 
-        public string GetTitle()
-        {
-            return _page.GetTitle();
-        }
+        public string Title => _page.GetTitle();
+
 
         public void WaitForCloverPage()
         {
             _page.WaitForElement(() => CloverPageRootElement);
+        }
+
+        public bool IsPageTitleMatch()
+        {
+            const string title1 = "Shop for a Clover Point of Sale (POS) System | Clover";
+            const string title2 = "POS System & Credit Card Readers | Clover";
+
+            return title1.Equals(Title) || title2.Equals(Title);
         }
     }
 }

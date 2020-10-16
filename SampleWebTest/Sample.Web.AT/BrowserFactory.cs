@@ -18,6 +18,57 @@ namespace Sample.Web.AT
         public Func<IWebDriver> WebDriver { get; } = () => new ChromeDriver();
     }
 
+    public class ChromeHeadLessBrowser : IBrowser
+    {
+        public Func<IWebDriver> WebDriver
+        {
+            get
+            {
+                return () =>
+                {
+                    var chromeOptions = new ChromeOptions();
+                    chromeOptions.AddArgument("disable-infobars");
+                    chromeOptions.AddArguments("headless");
+                    return new ChromeDriver(chromeOptions);
+                };
+            }
+        }
+    }
+
+    public class AndroidBrowser : IBrowser
+    {
+        public Func<IWebDriver> WebDriver
+        {
+            get
+            {
+                return () =>
+                {
+                    var chromeOptions = new ChromeOptions();
+                    chromeOptions.AddArgument("disable-infobars");
+                    chromeOptions.EnableMobileEmulation("Pixel 2");
+                    return new ChromeDriver(chromeOptions);
+                };
+            }
+        }
+    }
+
+    public class IphoneBrowser : IBrowser
+    {
+        public Func<IWebDriver> WebDriver
+        {
+            get
+            {
+                return () =>
+                {
+                    var chromeOptions = new ChromeOptions();
+                    chromeOptions.AddArgument("disable-infobars");
+                    chromeOptions.EnableMobileEmulation("iPhone 6");
+                    return new ChromeDriver(chromeOptions);
+                };
+            }
+        }
+    }
+
     public class FireFoxBrowser : IBrowser
     {
         public Func<IWebDriver> WebDriver { get; } = () => new FirefoxDriver();
@@ -42,8 +93,11 @@ namespace Sample.Web.AT
             _browsers = new Dictionary<string, IBrowser>
             {
                 {"Chrome", new ChromeBrowser()},
+                {"HeadLessChrome", new ChromeHeadLessBrowser()},
                 {"Firefox", new FireFoxBrowser()},
                 {"InternetExplorer", new InternetExplorerBrowser()},
+                {"Android", new AndroidBrowser()},
+                {"Ios", new IphoneBrowser()},
                 {"MicrosoftEdge", new MicrosoftEdgeBrowser()}
             };
         }

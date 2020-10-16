@@ -16,7 +16,7 @@ namespace Sample.PageObject
         {
             _driver = driver;
             _waitTime = waitTime;
-            _wait = new WebDriverWait(_driver,TimeSpan.FromSeconds(waitTime));
+            _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(waitTime));
         }
 
         public string GetTitle()
@@ -30,27 +30,38 @@ namespace Sample.PageObject
             _driver.Navigate().GoToUrl(uri);
         }
 
+        public void DisposeDriver()
+        {
+            _driver.Quit();
+            _driver.Dispose();
+        }
+
         public void WaitForElement(Func<IWebElement> elementFunc)
         {
-            try
+            _wait.Until(_ =>
             {
-                _wait.Until(_ =>
+                try
                 {
                     var element = elementFunc.Invoke();
                     return element.Enabled && element.Displayed;
-                });
-            }
+                }
+                catch (WebDriverTimeoutException)
+                {
+                    Console.WriteLine($"Maximum waiting time has been reached. Element is not found in {_waitTime}");
+                    return false;
 
-            catch (WebDriverTimeoutException)
-            {
-                Console.WriteLine($"Maximum waiting time has been reached. Element is not found in {_waitTime}");
-                Environment.Exit(0);
-            }
-          
+                }
+                catch (ElementNotInteractableException e)
+                {
+                    Console.WriteLine(e.Message);
+                    return false;
+                }
+                catch (StaleElementReferenceException e)
+                {
+                    Console.WriteLine(e.Message);
+                    return false;
+                }
+            });
         }
-
-        
-
-
     }
 }

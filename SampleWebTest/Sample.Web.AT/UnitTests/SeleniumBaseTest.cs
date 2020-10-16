@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
 namespace Sample.Web.AT.UnitTests
 {
     [TestClass]
-    public class SeleniumBaseTest
+    public abstract class SeleniumBaseTest
     {
 
         protected IWebDriver Driver;
@@ -21,6 +20,7 @@ namespace Sample.Web.AT.UnitTests
         public void TestCleanUp()
         {
             Driver.Quit();
+            Driver.Dispose();
         }
     }
 }

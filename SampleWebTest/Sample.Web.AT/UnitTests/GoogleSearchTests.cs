@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.Chrome;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sample.PageObject;
 using Sample.PageObject.PageObjects.Clover;
 using Sample.PageObject.PageObjects.Google;
@@ -12,11 +10,15 @@ namespace Sample.Web.AT.UnitTests
     {
         private const string GoogleUrl = "https://www.google.com";
 
+
         [TestMethod]
         [DataRow("Chrome")]
+        [DataRow("HeadLessChrome")]
         [DataRow("Firefox")]
         [DataRow("InternetExplorer")]
-        public void ChromeTest(string browserType)
+        [DataRow("Android")]
+        [DataRow("Ios")]
+        public void DesktopBrowsers(string browserType)
         {
             Driver = BrowserFactory.GetWebDriver(browserType);
             var page = new Page(Driver);
@@ -27,15 +29,12 @@ namespace Sample.Web.AT.UnitTests
             googlePage.
                 Set("Clover").
                 ClickSearch().
-                ClickResult("Clover");
+                ClickResult("Clover®");
 
             cloverPage.
                 WaitForCloverPage();
 
-            const string title = "Credit Card Processing for Small Businesses";
-
-            Assert.AreEqual(title,cloverPage.GetTitle(),"Title not matched");
+            Assert.IsTrue(cloverPage.IsPageTitleMatch(), "Title not matched");
         }
-       
     }
 }
