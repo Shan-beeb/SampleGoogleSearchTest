@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -11,6 +12,8 @@ namespace Sample.PageObject
         private readonly WebDriverWait _wait;
 
         public IWebElement FindElement(By by) => _driver.FindElement(by);
+
+        public IEnumerable<IWebElement> FindElements(By by) => _driver.FindElements(by);
 
         public Page(IWebDriver driver, int waitTime = 10)
         {
@@ -62,6 +65,11 @@ namespace Sample.PageObject
                     return false;
                 }
             });
+        }
+
+        public string GetCurrentUrl()
+        {
+            return _driver.Url;
         }
     }
 }

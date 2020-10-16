@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [assembly: AssemblyTitle("Sample.Web.AT")]
 [assembly: AssemblyDescription("")]
@@ -9,6 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: Parallelize(Workers = 4, Scope = ExecutionScope.ClassLevel)]
 
 [assembly: ComVisible(false)]
 

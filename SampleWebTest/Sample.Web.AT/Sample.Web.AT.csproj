@@ -118,8 +118,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcceptanceTests\Steps\BrowserTypeInitializer.cs" />
-    <Compile Include="AcceptanceTests\Steps\BrowserUrlInitializer.cs" />
+    <Compile Include="AcceptanceTests\Steps\AmazonHomePageSteps.cs" />
+    <Compile Include="AcceptanceTests\BrowserTypeInitializer.cs" />
     <Compile Include="AcceptanceTests\Steps\CloverPageSteps.cs" />
     <Compile Include="AcceptanceTests\Steps\GoogleSearchPageSteps.cs" />
     <Compile Include="AcceptanceTests\WebDriverSupport.cs" />
@@ -129,7 +129,7 @@
     <Compile Include="UnitTests\SeleniumBaseTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AcceptanceTests\Features\Sample.feature" />
+    <None Include="AcceptanceTests\Features\MultiBrowserGoogleSearch.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

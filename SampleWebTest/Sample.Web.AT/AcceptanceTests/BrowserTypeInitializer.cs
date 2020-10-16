@@ -2,7 +2,7 @@
 using Sample.PageObject;
 using TechTalk.SpecFlow;
 
-namespace Sample.Web.AT.AcceptanceTests.Steps
+namespace Sample.Web.AT.AcceptanceTests
 {
     [Binding]
     public class BrowserTypeInitializer
@@ -10,10 +10,10 @@ namespace Sample.Web.AT.AcceptanceTests.Steps
         private readonly IObjectContainer _objectContainer;
         private readonly BrowserFactory _browserFactory;
 
-        public BrowserTypeInitializer(IObjectContainer objectContainer)
+        public BrowserTypeInitializer(IObjectContainer objectContainer,BrowserFactory browserFactory)
         {
             _objectContainer = objectContainer;
-            _browserFactory = new BrowserFactory();
+            _browserFactory = browserFactory;
         }
 
 

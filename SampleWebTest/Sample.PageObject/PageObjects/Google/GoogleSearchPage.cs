@@ -18,6 +18,7 @@ namespace Sample.PageObject.PageObjects.Google
             _page = page;
         }
 
+
         public GoogleSearchPage NavigateToGoogleSearchPage()
         {
             _page.NavigateTo(Url);
@@ -39,25 +40,28 @@ namespace Sample.PageObject.PageObjects.Google
 
         public bool IsExpectedResultDisplayed(string match)
         {
+            var xpath = $"//a[contains(@href,'.{match.ToLower()}.')]";
             try
             {
-                IWebElement Element() => _page.FindElement(By.XPath($"//*[contains(text(),'{match}')]"));
+                IWebElement Element() => _page.FindElement(By.XPath(xpath));
                 _page.WaitForElement(Element);
                 return true;
             }
 
-            catch (NoSuchElementException)
+            catch (Exception e)
             {
-                Console.WriteLine("Search result is not found");
+                Console.WriteLine($"Xpath: {xpath} not be found");
+                Console.WriteLine(e.Message);
                 return false;
             }
         }
 
-        public void  ClickResult(string match)
+        public void ClickResult(string match)
         {
             IsExpectedResultDisplayed(match);
-            var element = _page.FindElement(By.XPath($"//*[contains(text(),'{match}')]"));
+            var element = _page.FindElement(By.XPath($"//a[contains(@href,'.{match.ToLower()}.')]"));
             element.Click();
+            
         }
 
 

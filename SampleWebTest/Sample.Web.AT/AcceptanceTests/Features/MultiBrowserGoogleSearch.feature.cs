@@ -20,7 +20,7 @@ namespace Sample.Web.AT.AcceptanceTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class SampleFeature
+    public partial class MultiBrowserGoogleSearchFeatureFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -29,7 +29,7 @@ namespace Sample.Web.AT.AcceptanceTests.Features
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Sample.feature"
+#line 1 "MultiBrowserGoogleSearch.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -48,8 +48,7 @@ namespace Sample.Web.AT.AcceptanceTests.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AcceptanceTests/Features", "Sample", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AcceptanceTests/Features", "Multi browser google search feature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,9 +63,9 @@ namespace Sample.Web.AT.AcceptanceTests.Features
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Sample")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Multi browser google search feature")))
             {
-                global::Sample.Web.AT.AcceptanceTests.Features.SampleFeature.FeatureSetup(null);
+                global::Sample.Web.AT.AcceptanceTests.Features.MultiBrowserGoogleSearchFeatureFeature.FeatureSetup(null);
             }
         }
         
@@ -98,7 +97,7 @@ namespace Sample.Web.AT.AcceptanceTests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("browser", browser);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Searching clover.com on Google", null, tagsOfScenario, argumentsOfScenario);
-#line 6
+#line 4
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -118,19 +117,19 @@ namespace Sample.Web.AT.AcceptanceTests.Features
             else
             {
                 this.ScenarioStart();
-#line 7
+#line 5
  testRunner.Given(string.Format("a user is using {0} browser", browser), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 8
+#line 6
  testRunner.And("a user searches for \'Clover\' on Google Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 7
  testRunner.Then("\'Clover\' official page should be displayed on Google results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 10
+#line 8
  testRunner.When("a user clicks on \'Clover\' official page on Google results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 9
  testRunner.Then("a user should be able to navigate to Clovers.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -139,72 +138,72 @@ namespace Sample.Web.AT.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: Chrome")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Chrome")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Chrome")]
         public virtual void SearchingClover_ComOnGoogle_Chrome()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("Chrome", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: HeadLessChrome")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "HeadLessChrome")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "HeadLessChrome")]
         public virtual void SearchingClover_ComOnGoogle_HeadLessChrome()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("HeadLessChrome", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: Firefox")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Firefox")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Firefox")]
         public virtual void SearchingClover_ComOnGoogle_Firefox()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("Firefox", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: InternetExplorer")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "InternetExplorer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "InternetExplorer")]
         public virtual void SearchingClover_ComOnGoogle_InternetExplorer()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("InternetExplorer", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: Android")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Android")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Android")]
         public virtual void SearchingClover_ComOnGoogle_Android()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("Android", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching clover.com on Google: Ios")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Ios")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Ios")]
         public virtual void SearchingClover_ComOnGoogle_Ios()
         {
-#line 6
+#line 4
  this.SearchingClover_ComOnGoogle("Ios", ((string[])(null)));
 #line hidden
         }
@@ -215,7 +214,7 @@ namespace Sample.Web.AT.AcceptanceTests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("browser", browser);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Searching Amazon.com on Google", null, tagsOfScenario, argumentsOfScenario);
-#line 22
+#line 20
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -235,19 +234,19 @@ namespace Sample.Web.AT.AcceptanceTests.Features
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 21
  testRunner.Given(string.Format("a user is using {0} browser", browser), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 22
  testRunner.And("a user searches for \'amazon\' on Google Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 23
  testRunner.Then("\'amazon\' official page should be displayed on Google results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 26
+#line 24
  testRunner.When("a user clicks on \'amazon\' official page on Google results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 25
  testRunner.Then("a user should be able to navigate to amazon.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -256,72 +255,72 @@ namespace Sample.Web.AT.AcceptanceTests.Features
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: Chrome")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Chrome")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Chrome")]
         public virtual void SearchingAmazon_ComOnGoogle_Chrome()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("Chrome", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: HeadLessChrome")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "HeadLessChrome")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "HeadLessChrome")]
         public virtual void SearchingAmazon_ComOnGoogle_HeadLessChrome()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("HeadLessChrome", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: Firefox")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Firefox")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Firefox")]
         public virtual void SearchingAmazon_ComOnGoogle_Firefox()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("Firefox", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: InternetExplorer")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "InternetExplorer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "InternetExplorer")]
         public virtual void SearchingAmazon_ComOnGoogle_InternetExplorer()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("InternetExplorer", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: Android")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Android")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Android")]
         public virtual void SearchingAmazon_ComOnGoogle_Android()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("Android", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Searching Amazon.com on Google: Ios")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sample")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Multi browser google search feature")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Ios")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:browser", "Ios")]
         public virtual void SearchingAmazon_ComOnGoogle_Ios()
         {
-#line 22
+#line 20
  this.SearchingAmazon_ComOnGoogle("Ios", ((string[])(null)));
 #line hidden
         }

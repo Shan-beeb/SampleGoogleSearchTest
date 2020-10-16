@@ -14,6 +14,7 @@ namespace Sample.Web.AT.AcceptanceTests.Steps
             _googleSearchPage = googleSearchPage;
         }
 
+        // Givens
         [Given(@"a user searches for '(.*)' on Google Search")]
         public void GivenAUserSearchesForOnGoogleSearch(string search)
         {
@@ -23,21 +24,22 @@ namespace Sample.Web.AT.AcceptanceTests.Steps
                 ClickSearch();
         }
 
-        [When(@"a user clicks on Clover's official page on Google results")]
-        public void WhenAUserClicksOnCloverSOfficialPageOnGoogleResults()
-        {
-            const string clover = "Clover®";
-            _googleSearchPage.ClickResult(clover);
-        }
 
-        [Then(@"Clover's official page should be displayed on Google results")]
-        public void ThenCloverSOfficialPageShouldBeDisplayedOnGoogleResults()
+        // Whens
+        [When(@"a user clicks on '(.*)' official page on Google results")]
+        public void WhenAUserClicksOnOfficialPageOnGoogleResults(string result)
         {
-            const string clover = "Clover®";
-            Assert.IsTrue(_googleSearchPage.IsExpectedResultDisplayed(clover),"_googleSearchPage.IsExpectedResultDisplayed(clover)");
+            //const string clover = "Clover®";
+            _googleSearchPage.ClickResult(result);
         }
 
 
+        // Thens
+        [Then(@"'(.*)' official page should be displayed on Google results")]
+        public void ThenCloverSOfficialPageShouldBeDisplayedOnGoogleResults(string result)
+        {
+            Assert.IsTrue(_googleSearchPage.IsExpectedResultDisplayed(result),"_googleSearchPage.IsExpectedResultDisplayed(clover)");
+        }
 
     }
 }
