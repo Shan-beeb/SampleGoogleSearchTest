@@ -67,9 +67,5 @@ namespace Sample.PageObject
             });
         }
 
-        public string GetCurrentUrl()
-        {
-            return _driver.Url;
-        }
     }
 }
